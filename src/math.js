@@ -1,41 +1,88 @@
 function add(a, b) {
-  //TODO
+  if (typeof a !== "number" || typeof b !== "number") return null;
+  return a + b;
 }
 
 function subtract(a, b) {
-  //TODO
+  if (typeof a !== "number" || typeof b !== "number") return null;
+  return a - b;
 }
 
 function multiply(a, b) {
-  //TODO
+  if (typeof a !== "number" || typeof b !== "number") return null;
+  return a * b;
 }
 
 function divide(a, b) {
-  //TODO
+  if (typeof a !== "number" || typeof b !== "number") return null;
+  if (b === 0) return null;
+  return a / b;
 }
 
 function sumArray(numbers) {
-  //TODO
+  if (!Array.isArray(numbers)) return null;
+
+  let sum = 0;
+  for (let n of numbers) {
+    if (typeof n !== "number") return null;
+    sum += n;
+  }
+  return sum;
 }
 
 function average(numbers) {
-  //TODO
+  if (!Array.isArray(numbers)) return null;
+  if (numbers.length === 0) return null;
+
+  let sum = 0;
+  for (let n of numbers) {
+    if (typeof n !== "number") return null;
+    sum += n;
+  }
+
+  return sum / numbers.length;
 }
 
 function max(numbers) {
-  //TODO
+  if (!Array.isArray(numbers)) return null;
+  if (numbers.length === 0) return null;
+
+  for (let n of numbers) {
+    if (typeof n !== "number") return null;
+  }
+
+  return Math.max(...numbers);
 }
 
 function min(numbers) {
-  //TODO
+  if (!Array.isArray(numbers)) return null;
+  if (numbers.length === 0) return null;
+
+  for (let n of numbers) {
+    if (typeof n !== "number") return null;
+  }
+
+  return Math.min(...numbers);
 }
 
 function isEven(number) {
-  //TODO
+  if (typeof number !== "number") return null;
+  if (Number.isNaN(number)) return false;
+  if (!Number.isInteger(number)) return null;
+
+  return number % 2 === 0;
 }
 
 function factorial(n) {
-  //TODO
+  if (typeof n !== "number") return null;
+  if (!Number.isInteger(n)) return null;
+  if (n < 0) return null;
+
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
 }
 
 
